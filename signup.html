@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="assets/css/signinsignup.css" />
+    <noscript>
+		<link rel="stylesheet" href="assets/css/signinsignup.css" />
+	</noscript>
+</head>
+<body>
+    <div class="giris">
+        <div class="form">
+          <form class="kayit">
+            <h2>Çevrimiçi Elçi Spy</h2><br>
+            <h3>Welcome</h3>
+            <input type="text" placeholder="Adınız"/>
+            <input type="password" placeholder="Şifreniz"/>
+            <input type="text" placeholder="Mail Adresiniz"/>
+            <button>Oluştur</button>
+            <p class="mesaj">Zaten Üye Misin ? <a href="#">Kayıt Ol</a></p>
+          </form>
+          <form class="giris-from">
+            <h2>Çevrimiçi Elçi</h2>
+            <h3>Welcome</h3>
+            <input type="text" placeholder="Adınız"/>
+            <input type="password" placeholder="Şifreniz"/>
+            <button>Giriş Yap</button>
+            <p class="mesaj">Üye Değil Misin ? <a href="signin.html">Kayıt Ol</a></p>
+          </form>
+        </div>
+      </div>
+              <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+          event.preventDefault(); // Formun gönderilmesini engeller
+    
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+    
+          // Belirlediğiniz kullanıcı adı ve parolayı kontrol edin
+          var adminUsername = "HyperMehmet";
+          var adminPassword = "25432023";
+    
+          if (username === adminUsername && password === adminPassword) {
+            // Şifre doğruysa yönlendirme yap
+            window.location.href = "Ana Sayfa.html"; // Yönlendirilecek siteyi buraya yazın
+          } else {
+            alert("Hatalı kullanıcı adı veya parola! Lütfen doğru bilgileri girin.");
+          }
+        });
+      </script>
+</body>
+</html>
